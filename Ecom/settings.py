@@ -18,7 +18,7 @@ SECRET_KEY = 'django-insecure-p3+5&v!45)hzmi=ah*r8=*lh%qq=g_1dj02jwzga=%4s)cr1z%
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['e-commerce-site-production-3893.up.railway.app', 'https://e-commerce-site-production-3893.up.railway.app']
+ALLOWED_HOSTS = ['127.0.0.1', 'localhost', 'e-commerce-site-production-3893.up.railway.app', 'https://e-commerce-site-production-3893.up.railway.app']
 CSRF_TRUSTED_ORIGINS = ['https://e-commerce-site-production-3893.up.railway.app']
 
 
@@ -35,6 +35,7 @@ INSTALLED_APPS = [
     'cart',
     'payment',
     'whitenoise.runserver_nostatic',
+    'paypal.standard.ipn',
 ]
 
 MIDDLEWARE = [
@@ -154,3 +155,10 @@ MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 # https://docs.djangoproject.com/en/5.2/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+
+# Add paypal settings
+# set sandbox to true
+PAYPAL_TEST = True
+# business email
+PAYPAL_RECEIVER_EMAIL = 'business@zafar.com'
