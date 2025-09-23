@@ -1,0 +1,2 @@
+web : gunicorn Store.wsgi --log-sile
+web : pyhton manage.py migrate && gunicorn Store.wsg
