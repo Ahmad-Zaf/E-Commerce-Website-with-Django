@@ -34,7 +34,7 @@ INSTALLED_APPS = [
     'Store',
     'cart',
     'payment',
-    'whitenoise.runserver_nostatic',
+    # 'whitenoise.runserver_nostatic',
     'paypal.standard.ipn',
 ]
 
@@ -139,11 +139,11 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/5.2/howto/static-files/
 
-STATIC_URL = 'static/'
-STATICFILES_DIRS = ['static/']
+STATIC_URL = '/static/'
+STATICFILES_DIRS = [BASE_DIR / 'static/']
 
 # whitenoise static 
-STATICFILES_STOGRAGE = 'whitenoise.stograge.CompressedManifestStaticFilesStorage'
+STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
 STATIC_ROOT = BASE_DIR / 'staticfiles'
 
 
