@@ -18,8 +18,8 @@ SECRET_KEY = 'django-insecure-p3+5&v!45)hzmi=ah*r8=*lh%qq=g_1dj02jwzga=%4s)cr1z%
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
-CSRF_TRUSTED_ORIGINS = []
+ALLOWED_HOSTS = ['e-commerce-site-production-3893.up.railway.app', 'https://e-commerce-site-production-3893.up.railway.app']
+CSRF_TRUSTED_ORIGINS = ['https://e-commerce-site-production-3893.up.railway.app']
 
 
 # Application definition
@@ -34,7 +34,11 @@ INSTALLED_APPS = [
     'Store',
     'cart',
     'payment',
+<<<<<<< HEAD
     'whitenoise.runserver_nostatic',
+=======
+    # 'whitenoise.runserver_nostatic',
+>>>>>>> 11e239f4f458cdeb647461893edcf666404145a5
     'paypal.standard.ipn',
 ]
 
@@ -139,11 +143,11 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/5.2/howto/static-files/
 
-STATIC_URL = 'static/'
-STATICFILES_DIRS = ['static/']
+STATIC_URL = '/static/'
+STATICFILES_DIRS = [BASE_DIR / 'static/']
 
 # whitenoise static 
-STATICFILES_STOGRAGE = 'whitenoise.stograge.CompressedManifestStaticFilesStorage'
+STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
 STATIC_ROOT = BASE_DIR / 'staticfiles'
 
 
@@ -157,6 +161,12 @@ MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 
+
 PAYPAL_TEST = True
+
+# Add paypal settings
+# set sandbox to true
+PAYPAL_TEST = True
+# business email
 
 PAYPAL_RECEIVER_EMAIL = 'business@zafar.com'

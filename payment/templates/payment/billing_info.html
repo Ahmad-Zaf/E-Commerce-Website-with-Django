@@ -65,14 +65,16 @@
                               <a href="{% url 'checkout'%}" class="btn btn-outline-warning">Update Shipping</a>
                     </div>
                 </div>
+
                 <br><br>
 
                 <center>
                     {{ paypal_form.render }}
                 </center>
 
+                <br>
 
-                
+
                 <br>
                 <div class="card">
                     <div class="card-header">
@@ -86,7 +88,16 @@
                               
                     </div>
                 </div>
+                <br><br>
+
+                <center>
+                    <h3>Pay with PayPal</h3>
+                    {{ payapl_form.render }}
+                </center>
                 <br>
+
+
+
                 <button type="submit" class="btn btn-success">PAY Now</button>
                 
             </div>
