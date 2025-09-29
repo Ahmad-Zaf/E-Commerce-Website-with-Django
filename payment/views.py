@@ -19,6 +19,26 @@ from paypal.standard.forms import PayPalPaymentsForm
 from django.conf import settings
 import uuid
 
+def store(request):
+    # Fetch all products (or filter by category if needed)
+    products = Product.objects.all()
+    
+    # Optional: fetch categories for filtering/navigation
+    categories = Category.objects.all()
+    
+    # Optional: implement search/filter
+    query = request.GET.get('q')
+    if query:
+        products = products.filter(name__icontains=query)
+    
+    # Pass data to template
+    context = {
+        'products': products,
+        'categories': categories
+    }
+    return render(request, 'store.html', context)
+
+
 def orders(request,pk ):
     if request.user.is_authenticated and request.user.is_superuser:
 
