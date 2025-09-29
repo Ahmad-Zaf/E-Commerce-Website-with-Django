@@ -19,6 +19,12 @@ from paypal.standard.forms import PayPalPaymentsForm
 from django.conf import settings
 import uuid
 
+@login_required
+def order_history(request):
+    orders = Order.objects.filter(user=request.user).order_by('-created_at')
+    return render(request, 'order_history.html', {'orders': orders})
+
+
 def store(request):
     # Fetch all products (or filter by category if needed)
     products = Product.objects.all()
