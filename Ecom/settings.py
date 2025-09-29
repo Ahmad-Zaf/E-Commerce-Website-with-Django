@@ -166,4 +166,4 @@ PAYPAL_TEST = True
 PAYPAL_TEST = True
 # business email
 
-PAYPAL_RECEIVER_EMAIL = 'business@zafar.com'
+PAYPAL_RECEIVER_EMAIL = 'business@examtest.com'
