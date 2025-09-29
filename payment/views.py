@@ -202,25 +202,44 @@ def billing_info(request):
         my_shipping = request.POST
         request.session['my_shipping'] = my_shipping
 
+        host= request.get_host()
+
+        paypal_dict = {
+            'business': settings.PAYPAL_RECEIVER_EMAIL,
+            'amount' : totals ,
+            'item_name' : 'PRODUCTS',
+            'no_shipping': '2',
+            'invoice' : str(uuid.uuid4()),
+            'currency_code' : 'USD',
+            'notify_url' : 'https://{}{}'.format(host, reverse("paypal-ipn")),
+            'return_url' : 'https://{}{}'.format(host, reverse("payment_success")),
+            'cancel_return' : 'https://{}{}'.format(host, reverse("payment_failed")), 
+        }
+
+        # Create actual paypal button
+        paypal_form = PayPalPaymentsForm(initial=paypal_dict)
+
         if request.user.is_authenticated:
 
             billing_form = PaymentForm()
             return render(request, "payment/billing_info.html", {
-            "cart_products": cart_products,
-            "quantities": quantities,
-            "totals": totals,
-            "shipping_info": request.POST,
-            "billing_form":billing_form,
+                'paypal_form':paypal_form,
+                "cart_products": cart_products,
+                "quantities": quantities,
+                "totals": totals,
+                "shipping_info": request.POST,
+                "billing_form":billing_form,
             })
         
         else:
             billing_form = PaymentForm()
             return render(request, "payment/billing_info.html", {
-            "cart_products": cart_products,
-            "quantities": quantities,
-            "totals": totals,
-            "shipping_info": request.POST,
-            "billing_form":billing_form,
+                "paypal_form":paypal_form,
+                "cart_products": cart_products,
+                "quantities": quantities,
+                "totals": totals,
+                "shipping_info": request.POST,
+                "billing_form":billing_form,
             })
 
 
@@ -270,3 +289,6 @@ def checkout(request):
 
 def payment_success(request):
     return render(request, "payment/payment_success.html", {})
+
+def payment_failed(request):
+    return render(request, "payment/payment_failed.html", {})

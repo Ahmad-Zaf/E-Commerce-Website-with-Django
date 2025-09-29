@@ -18,7 +18,7 @@ SECRET_KEY = 'django-insecure-p3+5&v!45)hzmi=ah*r8=*lh%qq=g_1dj02jwzga=%4s)cr1z%
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['e-commerce-site-production-3893.up.railway.app', 'https://e-commerce-site-production-3893.up.railway.app']
+ALLOWED_HOSTS = [ '127.0.0.1','127.0.0.1:8000','e-commerce-site-production-3893.up.railway.app', 'https://e-commerce-site-production-3893.up.railway.app']
 CSRF_TRUSTED_ORIGINS = ['https://e-commerce-site-production-3893.up.railway.app']
 
 
@@ -34,11 +34,8 @@ INSTALLED_APPS = [
     'Store',
     'cart',
     'payment',
-<<<<<<< HEAD
     'whitenoise.runserver_nostatic',
-=======
     # 'whitenoise.runserver_nostatic',
->>>>>>> 11e239f4f458cdeb647461893edcf666404145a5
     'paypal.standard.ipn',
 ]
 

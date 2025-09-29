@@ -1,5 +1,13 @@
-
-<h1>PAyment failed</h1>
-<h2>
-    Payment Failed. Please try again.
-</h2>
+{% extends "base.html" %}
+{% block content %}
+<div class="container py-5 text-center">
+    <div class="alert alert-danger shadow-lg p-4 rounded">
+        <h1 class="display-4">❌ Payment Failed</h1>
+        <p class="lead">Oops! Something went wrong with your payment.</p>
+        <hr>
+        <p>Please try again or use a different payment method.</p>
+        <a href="{% url 'checkout' %}" class="btn btn-danger mt-3">Retry Payment</a>
+        <a href="{% url 'store' %}" class="btn btn-outline-secondary mt-3">Back to Shop</a>
+    </div>
+</div>
+{% endblock %}

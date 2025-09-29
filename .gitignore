@@ -1,1 +1,18 @@
-.env
+# Python cache files
+__pycache__/
+*.pyc
+*.pyo
+
+# Django database
+db.sqlite3
+
+# Virtual environment
+venv/
+.env/
+
+# VSCode settings
+.vscode/
+
+# OS files
+.DS_Store
+Thumbs.db
