@@ -17,6 +17,7 @@ from django.db.models import Q
 
 import json
 
+from .models import Category
 from cart.cart import Cart
 
 
