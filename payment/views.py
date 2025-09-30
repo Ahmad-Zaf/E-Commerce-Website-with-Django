@@ -22,7 +22,7 @@ import uuid
 
 def order_history(request):
     if request.user.is_authenticated:
-        orders = Order.objects.filter(user=request.user).order_by('-created_at')
+        orders = Order.objects.filter(user=request.user).order_by('-date_ordered')
         return render(request, 'order_history.html', {'orders': orders})
     else:
         return redirect('home')
