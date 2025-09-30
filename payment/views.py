@@ -4,6 +4,7 @@ from payment.models import ShippingAddress, Order, OrderItem
 from payment.forms import ShippingForm, PaymentForm
 from django.contrib.auth.models import User
 from django.contrib import messages
+from .models import Category
 from Store.models import Product, Profile
 import datetime
 
