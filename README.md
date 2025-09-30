@@ -79,15 +79,3 @@ Update URLs in paypal_dict for success and failure redirects:
 Success → /payment/success/
 
 Failure → /payment/failed/
-
-📂 Project Structure
-ecom/
-│── ecom/                # Project settings
-│── payment/             # Payment app (PayPal integration)
-│   │── views.py         # Checkout, success & failure views
-│   │── urls.py          # Payment-related URLs
-│── products/            # Product catalog app
-│── templates/           # HTML templates (billing, success, failure)
-│── static/              # CSS, JS, Images
-│── requirements.txt     # Dependencies
-│── manage.py
