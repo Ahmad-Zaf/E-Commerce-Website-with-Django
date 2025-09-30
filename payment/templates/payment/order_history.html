@@ -1,7 +1,16 @@
 {% extends "base.html" %}
 {% block content %}
-<div class="container py-5">
-    <h2 class="mb-4 text-center">My Order History</h2>
+
+<header class="bg-dark py-5">
+            <div class="container px-4 px-lg-5 my-5">
+                <div class="text-center text-white">
+                    <h1 class="display-4 fw-bolder">My Order History</h1>
+                    <p class="lead fw-normal text-white-50 mb-0">
+                </div>
+            </div>
+</header>
+<br>
+<br>
 
     {% if orders %}
         <div class="table-responsive shadow-lg rounded">
@@ -40,7 +49,7 @@
         </div>
     {% else %}
         <div class="alert alert-info text-center shadow-sm">
-            <p>No orders yet. <a href="{% url 'store' %}">Start shopping now!</a></p>
+            <p>No orders yet. <a href="{% url 'home' %}">Start shopping now!</a></p>
         </div>
     {% endif %}
 </div>
