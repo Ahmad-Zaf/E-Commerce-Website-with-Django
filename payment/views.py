@@ -28,22 +28,22 @@ def order_history(request):
         return redirect('home')
 
 
-def store(request):
-    # Fetch all products 
-    products = Product.objects.all()
+# def store(request):
+#     # Fetch all products 
+#     products = Product.objects.all()
     
-    categories = Category.objects.all()
+#     categories = Category.objects.all()
  
-    query = request.GET.get('q')
-    if query:
-        products = products.filter(name__icontains=query)
+#     query = request.GET.get('q')
+#     if query:
+#         products = products.filter(name__icontains=query)
     
-    # Pass data to template
-    context = {
-        'products': products,
-        'categories': categories
-    }
-    return render(request, 'payment/store.html', context)
+#     # Pass data to template
+#     context = {
+#         'products': products,
+#         'categories': categories
+#     }
+#     return render(request, 'payment/store.html', context)
 
 
 def orders(request,pk ):
@@ -325,8 +325,8 @@ def payment_success(request):
     if "cart" in request.session:
         del request.session["cart"]
         request.session.modified = True
-
-    return render(request, "payment/payment_success.html", {})
+        
+    return render(request, "payment/payment_success.html", {}) 
 
 def payment_failed(request):
     return render(request, "payment/payment_failed.html", {})
