@@ -1,78 +1,51 @@
 🛍️ E-Commerce Website with PayPal Integration
 
-This project is a full-featured e-commerce platform built using Django. It allows users to browse products, add them to a shopping cart, and securely complete purchases using PayPal payment gateway integration.
+    This project is a full-featured e-commerce platform built using Django. It allows users to browse products, add them to a shopping cart, and securely complete purchases using PayPal payment gateway integration.
 
 🚀 Features
 
-✅ User Authentication: Secure login & registration system
+    ✅ User Authentication: Secure login & registration system
 
-✅ Product Catalog: Display products with details & images
+    ✅ Product Catalog: Display products with details & images
 
-✅ Shopping Cart: Add, update, or remove items before checkout
+    ✅ Shopping Cart: Add, update, or remove items before checkout
 
-✅ Checkout System: Billing information collection
+    ✅ Checkout System: Billing information collection
 
-✅ PayPal Integration: Secure online payments with PayPal Sandbox/Live
+    ✅ PayPal Integration: Secure online payments with PayPal Sandbox/Live
 
-✅ Order Tracking: Redirects to success/failure pages based on payment result
+    ✅ Order Tracking: Redirects to success/failure pages based on payment result
 
-✅ Responsive UI: Works across devices
+    ✅ Responsive UI: Works across devices
 
 🛠️ Tech Stack
 
-Backend: Django 5.x
+    Backend: Django 5.x
 
-Frontend: HTML, CSS, Bootstrap
+    Frontend: HTML, CSS, Bootstrap
 
-Database: SQLite (can be switched to PostgreSQL/MySQL)
+    Database: SQLite (can be switched to PostgreSQL/MySQL)
 
-Payment Gateway: PayPal (via django-paypal)
+    Payment Gateway: PayPal (via django-paypal)
 
-Other Tools: Gunicorn, dj-database-url, NumPy, Matplotlib, OpenCV (for image processing utilities)
+    Other Tools: Gunicorn, dj-database-url, NumPy, Matplotlib, OpenCV (for image processing utilities)
 
-📦 Installation
+ScreenShots-
 
-Clone the repository:
+### Home Page  
+![Home Page](https://github.com/Ahmad-Zaf/E-Commerce-Website-with-Django/blob/main/Screenshot/1)Home_page.png?raw=true)
 
-git clone https://github.com/yourusername/ecom-paypal.git
-cd ecom-paypal
+### Upload MCQ Sheet  
+![Upload MCQ sheet](https://github.com/Ahmad-Zaf/E-Assessment-using-Image-Processing/blob/main/eassesment%20code/Asset/Upload%20MCQ%20sheet.png?raw=true)  
 
+### Compare Answers  
+![Compare Answers](https://github.com/Ahmad-Zaf/E-Assessment-using-Image-Processing/blob/main/eassesment%20code/Asset/Compare%20Answers.png?raw=true)  
 
-Create and activate a virtual environment:
+### Mark Graph  
+![Mark Graph](https://github.com/Ahmad-Zaf/E-Assessment-using-Image-Processing/blob/main/eassesment%20code/Asset/Mark%20graph.png?raw=true)  
 
-python -m venv venv
-source venv/bin/activate   # Linux/Mac
-venv\Scripts\activate      # Windows
-
-
-Install dependencies:
-
-pip install -r requirements.txt
-
-
-Run migrations:
-
-python manage.py migrate
-
-
-Create a superuser (for admin panel):
-
-python manage.py createsuperuser
-
-
-Run the server:
-
-python manage.py runserver
-
-💳 PayPal Setup
-
-Create a PayPal Developer Account → PayPal Developer
-
-Get your Sandbox Business Email and add it in settings.py:
-
-PAYPAL_RECEIVER_EMAIL = "your-business-email@example.com"
-PAYPAL_TEST = True  # Set to False for live payments
-
+### Enter Student Name  
+![Enter Student Name](https://github.com/Ahmad-Zaf/E-Assessment-using-Image-Processing/blob/main/eassesment%20code/Asset/Enter%20Student%20Name.png?raw=true)  
 
 Update URLs in paypal_dict for success and failure redirects:
 
