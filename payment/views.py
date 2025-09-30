@@ -315,6 +315,17 @@ def checkout(request):
 
 
 def payment_success(request):
+    # Get the Cart
+    cart = Cart(request)
+    cart_products = cart.get_prods
+    quantities = cart.get_quants
+    totals = cart.cart_total()
+
+    # Delete the Cart
+    if "cart" in request.session:
+        del request.session["cart"]
+        request.session.modified = True
+
     return render(request, "payment/payment_success.html", {})
 
 def payment_failed(request):
