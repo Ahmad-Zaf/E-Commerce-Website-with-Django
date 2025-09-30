@@ -33,22 +33,20 @@
 ScreenShots-
 
 ### Home Page  
-![Home Page](https://github.com/Ahmad-Zaf/E-Commerce-Website-with-Django/blob/main/Screenshot/1)Home_page.png?raw=true)
+![Home Page](https://github.com/Ahmad-Zaf/E-Commerce-Website-with-Django/blob/main/Screenshot/1-Home_page.png?raw=true)
 
-### Upload MCQ Sheet  
-![Upload MCQ sheet](https://github.com/Ahmad-Zaf/E-Assessment-using-Image-Processing/blob/main/eassesment%20code/Asset/Upload%20MCQ%20sheet.png?raw=true)  
+### Shopping Cart  
+![Shopping Cart](https://github.com/Ahmad-Zaf/E-Commerce-Website-with-Django/blob/main/Screenshot/2-Shopping_Cart.png?raw=true)  
 
-### Compare Answers  
-![Compare Answers](https://github.com/Ahmad-Zaf/E-Assessment-using-Image-Processing/blob/main/eassesment%20code/Asset/Compare%20Answers.png?raw=true)  
+### Billing Info  
+![Billing Info](https://github.com/Ahmad-Zaf/E-Commerce-Website-with-Django/blob/main/Screenshot/3-Billing_Info.png?raw=true)  
 
-### Mark Graph  
-![Mark Graph](https://github.com/Ahmad-Zaf/E-Assessment-using-Image-Processing/blob/main/eassesment%20code/Asset/Mark%20graph.png?raw=true)  
+### Payment Transaction  
+![Payment Transaction](https://github.com/Ahmad-Zaf/E-Commerce-Website-with-Django/blob/main/Screenshot/4-Trasaction.png?raw=true)
 
-### Enter Student Name  
-![Enter Student Name](https://github.com/Ahmad-Zaf/E-Assessment-using-Image-Processing/blob/main/eassesment%20code/Asset/Enter%20Student%20Name.png?raw=true)  
+### Payment Success  
+![Payment Success](https://github.com/Ahmad-Zaf/E-Commerce-Website-with-Django/blob/main/Screenshot/5-Payment_Success.png?raw=true)  
 
-Update URLs in paypal_dict for success and failure redirects:
+### Payment Failed  
+![Payment Failed](https://github.com/Ahmad-Zaf/E-Commerce-Website-with-Django/blob/main/Screenshot/6-Payment_Failed.png?raw=true)
 
-Success → /payment/success/
-
-Failure → /payment/failed/
