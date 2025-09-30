@@ -43,7 +43,7 @@ def store(request):
         'products': products,
         'categories': categories
     }
-    return render(request, 'paymnet/store.html', context)
+    return render(request, 'payment/store.html', context)
 
 
 def orders(request,pk ):
