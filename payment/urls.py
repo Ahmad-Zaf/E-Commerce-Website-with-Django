@@ -13,6 +13,5 @@ urlpatterns = [
     path('orders/<int:pk>', views.orders, name='orders'),
     path('paypal/', include('paypal.standard.ipn.urls')),
     path('payment/orders_history', views.order_history, name='order_history'),
-    path('', views.store, name="store"),
 
 ]
