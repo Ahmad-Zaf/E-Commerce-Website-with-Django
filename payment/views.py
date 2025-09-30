@@ -26,13 +26,11 @@ def order_history(request):
 
 
 def store(request):
-    # Fetch all products (or filter by category if needed)
+    # Fetch all products 
     products = Product.objects.all()
     
-    # Optional: fetch categories for filtering/navigation
     categories = Category.objects.all()
-    
-    # Optional: implement search/filter
+ 
     query = request.GET.get('q')
     if query:
         products = products.filter(name__icontains=query)
