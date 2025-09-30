@@ -19,10 +19,13 @@ from paypal.standard.forms import PayPalPaymentsForm
 from django.conf import settings
 import uuid
 
-@login_required
+
 def order_history(request):
-    orders = Order.objects.filter(user=request.user).order_by('-created_at')
-    return render(request, 'order_history.html', {'orders': orders})
+    if request.user.is_authenticated:
+        orders = Order.objects.filter(user=request.user).order_by('-created_at')
+        return render(request, 'order_history.html', {'orders': orders})
+    else:
+        return redirect('home')
 
 
 def store(request):
